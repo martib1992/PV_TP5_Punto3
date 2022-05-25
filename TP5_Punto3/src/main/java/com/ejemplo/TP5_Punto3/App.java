@@ -4,8 +4,9 @@ import java.util.Scanner;
 
 public class App 
 {
-    public static void main( String[] args )
-    {
+	
+    public static void main( String[] args ){
+    	
         boolean band=true;        
         Scanner leer = new Scanner(System.in); 
 //---------------------Menu   
@@ -22,7 +23,7 @@ public class App
         	System.out.print("| Seleccione una opcion: ");
         	int opc = leer.nextInt();;
         	System.out.println("|----------------------------------------|");
-                               
+        	limpiarPantalla();                   
                                                      
 
             switch(opc){
@@ -31,6 +32,8 @@ public class App
                     System.out.println("|        Bienvenidos al MENU de          |");
                     System.out.println("|          Programacion Visual           |");
                 	System.out.println("|----------------------------------------|");
+                	presionarTecla();
+                	limpiarPantalla();
                     break;
                     
                 }
@@ -43,6 +46,8 @@ public class App
                     System.out.println("|     Muchas gracias por tu visita       |");
                     System.out.println("|           UNJU - APU - 2022            |");
                 	System.out.println("|----------------------------------------|");
+                	presionarTecla();
+                	limpiarPantalla();
                 }
                    
 
@@ -50,5 +55,23 @@ public class App
             
         }while (band);                                         
     }
+    
+    // Funcion para limpiar la pantalla
+    
+    public static void limpiarPantalla() {
+    	for (int i=0; i<15; i++) {
+    		System.out.println();
+    	}	
+    }
+    
+    public static void presionarTecla() {
+    	System.out.println("| Pulse una tecla para continuar...      |");
+    	System.out.println("|----------------------------------------|");
+    	Scanner leer = new Scanner(System.in);
+    	String aux = leer.nextLine();
+
+    }
+    
+    
 }
 
